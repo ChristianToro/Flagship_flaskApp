@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+            <h1>Christian's Passions</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="{{ url_for('escape_tarkov') }}"><i class="fas fa-gamepad"></i> EFT</a></li>
+            <li><a href="{{ url_for('cooking') }}"><i class="fas fa-utensils"></i> Cooking</a></li>
+            <li><a href="{{ url_for('fitness') }}"><i class="fas fa-dumbbell"></i> Fitness</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        {% block content %}
+        <!-- Content unique to each page will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Christian's Flask App</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+</body>
+</html>

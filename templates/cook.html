@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="culinaryQuiz">
+    <h2>Culinary Quiz</h2>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. Which ingredient is essential for making a traditional Italian pesto?</p>
+        <input type="radio" id="pesto-basil" name="question1" value="Basil">
+        <label for="pesto-basil">Basil</label><br>
+        <input type="radio" id="pesto-oregano" name="question1" value="Oregano">
+        <label for="pesto-oregano">Oregano</label><br>
+        <input type="radio" id="pesto-thyme" name="question1" value="Thyme">
+        <label for="pesto-thyme">Thyme</label>
+      </div>
+      
+      <div class="question">
+        <p>2. What is the main ingredient in a mirepoix?</p>
+        <input type="radio" id="mirepoix-garlic" name="question2" value="Garlic">
+        <label for="mirepoix-garlic">Garlic</label><br>
+        <input type="radio" id="mirepoix-cumin" name="question2" value="Cumin">
+        <label for="mirepoix-cumin">Cumin</label><br>
+        <input type="radio" id="mirepoix-celery" name="question2" value="Celery">
+        <label for="mirepoix-celery">Celery</label>
+      </div>
+      
+      <div class="question">
+        <p>3. Which of these is a leavening agent?</p>
+        <input type="radio" id="leavening-yeast" name="question3" value="Yeast">
+        <label for="leavening-yeast">Yeast</label><br>
+        <input type="radio" id="leavening-salt" name="question3" value="Salt">
+        <label for="leavening-salt">Salt</label><br>
+        <input type="radio" id="leavening-sugar" name="question3" value="Sugar">
+        <label for="leavening-sugar">Sugar</label>
+      </div>
+      
+      <button type="button" id="submitQuiz">Submit Answers</button>
+    </form>
+    <div id="quizResults"></div>
+  </div>
+
+  <div id="sousVideSection">
+    <h2>Sous Vide Cooking</h2>
+    <p>Sous vide is a cooking method that involves vacuum-sealing food in a bag, then cooking it to a very precise temperature in a water bath. This technique produces results that are impossible to achieve through any other cooking method. Sous vide, which means "under vacuum" in French, refers to the process of vacuum-sealing food in a bag, then cooking it to a very precise temperature in a water bath. Not only does it produce results that are impossible to achieve through any other cooking method, but it also provides more control over doneness and texture, ensuring perfect results every time.</p>
+    <img src="{{ url_for('static', filename='images/sousvide.jpg') }}" alt="Sous Vide Cooking" width="500">
+</div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+
+{% endblock %}
