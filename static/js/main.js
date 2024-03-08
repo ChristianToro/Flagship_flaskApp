@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
         
         const resultsContainer = document.getElementById('quizResults');
-        resultsContainer.innerHTML = ""; // Clear previous results
+        resultsContainer.innerHTML = "";
         
         questions.forEach((question, index) => {
           const userAnswer = question.element ? question.element.value : "";
